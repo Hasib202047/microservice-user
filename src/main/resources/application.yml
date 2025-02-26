@@ -1,0 +1,32 @@
+server:
+  port: 8082
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    refresh:
+      enable: true
+    service-url:
+      defaultZone: http://localhost:8081/eureka
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 30
+spring:
+  banner:
+    charset: UTF-8
+  application:
+    name: @project.artifactId@
+    version: @project.version@
+  main:
+    web-application-type: servlet
+  datasource:
+    url: jdbc:postgresql://localhost:5432/practice
+    username: postgres
+    password: h@sib2211
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
