@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8083
 
 
 eureka:
@@ -30,3 +30,10 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
+logging:
+  level:
+    web: debug
+
+jwt:
+  secret : Y2FzYW5vYmxlLXNlY3JldC1rZXktZm9yLWp3dC1oYTUxMi1hdXRoZW50aWNhdGlvbi1zeXN0ZW0tMjAyNQ==
+  expiration : 3600000
