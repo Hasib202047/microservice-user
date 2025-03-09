@@ -1,19 +1,9 @@
 server:
   port: 8083
 
-
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    refresh:
-      enable: true
-    service-url:
-      defaultZone: http://localhost:8081/eureka
-  instance:
-    prefer-ip-address: true
-    lease-renewal-interval-in-seconds: 30
 spring:
+  profiles:
+    active: staging
   banner:
     charset: UTF-8
   application:
@@ -21,18 +11,6 @@ spring:
     version: @project.version@
   main:
     web-application-type: servlet
-  datasource:
-    url: jdbc:postgresql://localhost:5432/practice
-    username: postgres
-    password: h@sib2211
-    driver-class-name: org.postgresql.Driver
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-logging:
-  level:
-    web: debug
 
 jwt:
   secret : Y2FzYW5vYmxlLXNlY3JldC1rZXktZm9yLWp3dC1oYTUxMi1hdXRoZW50aWNhdGlvbi1zeXN0ZW0tMjAyNQ==

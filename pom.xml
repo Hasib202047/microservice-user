@@ -27,7 +27,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>23</java.version>
+		<java.version>21</java.version>
 		<spring-cloud.version>2024.0.0</spring-cloud.version>
 	</properties>
 	<dependencies>
@@ -87,6 +87,7 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>user-server</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
