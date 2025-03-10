@@ -19,6 +19,12 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
+  data:
+    redis:
+      host: redis-server
+      port: 6379
+      database: 0
+      password:
 logging:
   level:
     web: debug

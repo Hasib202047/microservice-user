@@ -76,4 +76,8 @@ public class JwtUtil {
     public Boolean validateToken(String token) {
         return !isTokenExpired(token);
     }
+
+    public long getJwtExpiry(String token) {
+        return (extractAllClaims(token).getExpiration().getTime() - System.currentTimeMillis()) / 1000;
+    }
 }
