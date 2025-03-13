@@ -28,8 +28,4 @@ public class TokenBlacklistService {
     public void blacklistToken(String token, long expiryTimeInSeconds) {
         redisTemplate.opsForValue().set(BLACKLIST_PREFIX + token, "blacklisted", expiryTimeInSeconds, TimeUnit.SECONDS);
     }
-
-    public boolean isTokenBlacklisted(String token) {
-        return redisTemplate.hasKey(BLACKLIST_PREFIX + token);
-    }
 }
