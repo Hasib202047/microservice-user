@@ -29,4 +29,9 @@ public class StudentControllerJpa {
     {
         return studentService.getAll();
     }
+
+    @PutMapping("update-dept/{id}")
+    public Response updateDept(@PathVariable("id") Integer id, @RequestParam("dept") String dept) throws InterruptedException {
+        return studentService.update(id,dept);
+    }
 }
